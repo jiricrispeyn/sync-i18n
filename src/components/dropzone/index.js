@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 
 export default class TheDropzone extends Component {
@@ -6,13 +7,13 @@ export default class TheDropzone extends Component {
     files: [],
   };
 
-  onDrop = files => {
-    this.setState({ files });
-    console.log(files);
+  onDrop = async files => {
+    // this.setState({ files });
+    this.props.onDrop(files);
   };
 
   onCancel = () => {
-    this.setState({ files: [] });
+    // this.setState({ files: [] });
   };
 
   render() {
@@ -40,3 +41,7 @@ export default class TheDropzone extends Component {
     );
   }
 }
+
+TheDropzone.propTypes = {
+  onDrop: PropTypes.func,
+};
