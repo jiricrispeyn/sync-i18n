@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
+import { StyledDropzone, FileInput } from './style';
 
 export default class TheDropzone extends Component {
   state = {
@@ -17,27 +18,18 @@ export default class TheDropzone extends Component {
   };
 
   render() {
-    const files = this.state.files.map(file => (
-      <li key={file.name}>
-        {file.name} - {file.size} bytes
-      </li>
-    ));
-
     return (
-      <section>
+      <StyledDropzone>
         <Dropzone onDrop={this.onDrop} onFileDialogCancel={this.onCancel}>
           {({ getRootProps, getInputProps }) => (
-            <div {...getRootProps()}>
+            <FileInput {...getRootProps()}>
               <input {...getInputProps()} />
-              <p>Drop files here, or click to select files</p>
-            </div>
+              <h3>Drop your files here</h3>
+              <p>Or upload a file from your computer</p>
+            </FileInput>
           )}
         </Dropzone>
-        <aside>
-          <h4>Files</h4>
-          <ul>{files}</ul>
-        </aside>
-      </section>
+      </StyledDropzone>
     );
   }
 }
