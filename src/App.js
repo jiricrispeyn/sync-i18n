@@ -1,59 +1,20 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+import 'normalize.css';
 import './App.css';
-import TheDropzone from './components/dropzone';
-import read from './utils/reader';
+import { Router } from '@reach/router';
+import Navbar from './components/navbar';
+import Home from './views/home';
+import Upload from './views/upload';
 
 class App extends Component {
-  state = {
-    src: null,
-  };
-
-  onDrop = async files => {
-    try {
-      const src = await read(files[0]);
-
-      console.log(src);
-
-      this.setState({ src });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  renderSrc(src) {
-    return (
-      <pre className="App-src">
-        <code>{JSON.stringify(src, null, 4)}</code>
-      </pre>
-    );
-  }
-
   render() {
-    const { src } = this.state;
-
     return (
       <div className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a> */}
-
-          {src ? (
-            this.renderSrc(src)
-          ) : (
-            <TheDropzone className="The-dropzone" onDrop={this.onDrop} />
-          )}
-        </header>
+        <Navbar />
+        <Router className="App-router">
+          <Home path="/" />
+          <Upload path="/upload" />
+        </Router>
       </div>
     );
   }
