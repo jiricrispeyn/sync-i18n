@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from '@reach/router';
 import { StyledNavbar, Title } from './style';
 
 export default class Navbar extends Component {
@@ -6,10 +7,12 @@ export default class Navbar extends Component {
     return (
       <StyledNavbar>
         <Title>
-          <span role="img" aria-label="Logo" aria-labelledby="logo">
-            ✨
-          </span>{' '}
-          Sync I18n
+          <Link to="/">
+            <span role="img" aria-label="Logo" aria-labelledby="logo">
+              ✨
+            </span>{' '}
+            Sync I18n
+          </Link>
         </Title>
       </StyledNavbar>
     );

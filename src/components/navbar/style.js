@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 export const StyledNavbar = styled.div`
   display: flex;
   align-items: center;
@@ -11,4 +10,9 @@ export const StyledNavbar = styled.div`
 
 export const Title = styled.h1`
   font-size: 18px;
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
 `;
