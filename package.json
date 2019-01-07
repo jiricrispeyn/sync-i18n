@@ -6,6 +6,7 @@
     "@mdi/font": "3.3.92",
     "@reach/router": "1.2.1",
     "normalize.css": "8.0.1",
+    "prismjs": "1.15.0",
     "react": "^16.7.0",
     "react-content-loader": "3.4.1",
     "react-dom": "^16.7.0",
