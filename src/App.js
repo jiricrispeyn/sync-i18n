@@ -6,6 +6,7 @@ import { Router } from '@reach/router';
 import Navbar from './components/navbar';
 import Home from './views/home';
 import Upload from './views/upload';
+import Edit from './views/edit';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Router className="App-router">
             <Home path="/" />
             <Upload path="/upload" />
+            <Edit path="/edit" />
           </Router>
         </Provider>
       </div>
