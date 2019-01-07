@@ -4,8 +4,11 @@
   flex: 1;
   height: 100vh;
   background-color: #FAFAFA;
+  overflow: hidden;
 }
 
 .App-router {
   flex: 1;
+  max-height: calc(100vh - 60px);
+  overflow: hidden;
 }
