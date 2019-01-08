@@ -40,7 +40,6 @@ export const CodeBlock = styled.div`
 
   .CodeBlock-content {
     display: flex;
-    padding: 20px 15px;
   }
 
   .CodeBlock-header-title {
