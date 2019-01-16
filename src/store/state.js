@@ -1,4 +1,4 @@
 export default {
-  sourceFile: null,
-  destinationFile: null,
+  sourceFile: {},
+  destinationFile: {},
 };
