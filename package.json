@@ -5,6 +5,7 @@
   "dependencies": {
     "@mdi/font": "3.3.92",
     "@reach/router": "1.2.1",
+    "keys-diff": "1.0.7",
     "normalize.css": "8.0.1",
     "prismjs": "1.15.0",
     "react": "^16.7.0",

@@ -5055,6 +5055,10 @@ jsx-ast-utils@^2.0.1:
   dependencies:
     array-includes "^3.0.3"
 
+keys-diff@1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/keys-diff/-/keys-diff-1.0.7.tgz#1b7ca9bf3c50e2ac6e953144a2e1cb3e96d7eee3"
+
 killable@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
